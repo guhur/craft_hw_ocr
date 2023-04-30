@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "craft-hw-ocr"
+version = "1.1"
+description = "Deep learning for document processing"
+authors = ["Vishnu N <vishnunkumar25@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "craft_hw_ocr"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+transformers = "^4.28.1"
+Pillow = "^9.5.0"
+torch = "^2.0.0"
+craft-text-detector = {git = "https://github.com/guhur/craft-text-detector.git"}
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.2.0"
+black = "^23.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
